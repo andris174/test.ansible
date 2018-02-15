@@ -7,12 +7,12 @@
   template: src=apache2.ports.conf dest=/etc/apache2/ports.conf
   notify: restart apache2
 
-- name: copy site default config
+- name: update site default config
   become: true
   replace:
-    path=/etc/apache2/sites-enabled/000-default.conf
-    regexp="^<VirtualHost *:80>"
-    replace="<VirtualHost *:8080>"
+    dest=/etc/apache2/sites-available/000-default.conf
+    regexp=":80>"
+    replace=":8080>"
   notify: restart apache2
 
 - name: enabled mod_rewrite
