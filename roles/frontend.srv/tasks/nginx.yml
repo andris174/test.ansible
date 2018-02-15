@@ -1,0 +1,8 @@
+- name: installing nginx
+  become: true
+  apt: pkg=nginx state=latest update_cache=true
+
+- name: copy frontend config
+  become: true
+  template: src=nginx.frontend.conf dest=/etc/nginx/conf.d/frontend.conf
+  notify: restart nginx

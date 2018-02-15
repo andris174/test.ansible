@@ -1,0 +1,4 @@
+---
+- include: php.yml
+- include: apache2.yml
+- include: wp.yml

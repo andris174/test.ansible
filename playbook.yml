@@ -1,0 +1,12 @@
+---
+- hosts: database.servers
+  roles:
+     - database.srv
+
+- hosts: backend.servers
+  roles:
+     - backend.srv
+
+- hosts: frontend.servers
+  roles:
+     - frontend.srv
