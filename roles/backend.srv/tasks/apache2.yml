@@ -1,14 +1,11 @@
 - name: installing apache2
-  become: true
   apt: pkg=apache2 state=latest update_cache=true
 
 - name: copy ports config
-  become: true
   template: src=apache2.ports.conf dest=/etc/apache2/ports.conf
   notify: restart apache2
 
 - name: update site default config
-  become: true
   replace:
     dest=/etc/apache2/sites-available/000-default.conf
     regexp=":80>"
@@ -16,11 +13,9 @@
   notify: restart apache2
 
 - name: enabled mod_rewrite
-  become: true
   apache2_module: name=rewrite state=present
   notify: restart apache2
 
 - name: enabled mod_php
-  become: true
   apache2_module: name=php7.0 state=present
   notify: restart apache2

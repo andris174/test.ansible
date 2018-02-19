@@ -2,11 +2,14 @@
 - hosts: database.servers
   roles:
      - database.srv
+  become: true
 
 - hosts: backend.servers
   roles:
      - backend.srv
+  become: true
 
 - hosts: frontend.servers
   roles:
      - frontend.srv
+  become: true

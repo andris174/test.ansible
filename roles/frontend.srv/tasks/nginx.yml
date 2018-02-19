@@ -1,15 +1,12 @@
 - name: installing nginx
-  become: true
   apt: pkg=nginx state=latest update_cache=true
 
 - name: copy frontend config
-  become: true
   template:
     src: nginx.frontend.conf
     dest: /etc/nginx/conf.d/frontend.conf
 
 - name: change upstream in nginx wp config
-  become: true
   lineinfile:
     dest: /etc/nginx/conf.d/frontend.conf
     regexp: "upstream front"
@@ -17,7 +14,6 @@
   notify: restart nginx
 
 - name: change wp site in nginx config
-  become: true
   lineinfile:
     dest: /etc/nginx/conf.d/frontend.conf
     regexp: "server_name"
