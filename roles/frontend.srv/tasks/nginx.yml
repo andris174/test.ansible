@@ -1,3 +1,11 @@
+- name: add apt key Nginx Stable PPA
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 8b3981e7a6852f782cc4951600a6f0a3c300ee8c
+
+- name: install Nginx Stable PPA
+  apt_repository: repo='ppa:nginx/stable' update_cache=yes
+
 - name: installing nginx
   apt: pkg=nginx state=latest update_cache=true
 
