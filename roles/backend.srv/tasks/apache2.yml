@@ -17,5 +17,5 @@
   notify: restart apache2
 
 - name: enabled mod_php
-  apache2_module: name=php7.0 state=present
+  apache2_module: name=php{{php_ver}} state=present
   notify: restart apache2
