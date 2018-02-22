@@ -1,15 +1,5 @@
-upstream_front_servers: upstream front { server front1.sarkisoff.com:8080; server front2.sarkisoff.com:8080; }
-
 http_wp_server_name: ansible.sarkisoff.com
-
-mysql_root_user: root
-mysql_root_password: mi6AebahAec8Reox
 
 mysql_wp_db: wp_db1
 mysql_wp_user: wp_user1
 mysql_wp_pwd: zeaHe4vuwo3Iiz8D
-
-lx_wp_user: wp_user1
-lx_wp_group: wp_user1
-
-php_ver: 7.1

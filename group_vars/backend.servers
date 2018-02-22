@@ -1,0 +1,4 @@
+lx_wp_user: wp_user1
+lx_wp_group: wp_user1
+
+php_ver: 7.1

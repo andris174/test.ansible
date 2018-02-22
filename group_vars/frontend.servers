@@ -1,0 +1,1 @@
+upstream_front_servers: upstream front { server front1.sarkisoff.com:8080; server front2.sarkisoff.com:8080; }
