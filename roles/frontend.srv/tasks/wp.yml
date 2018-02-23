@@ -1,0 +1,6 @@
+- name: inslall wp admin
+  uri:
+    url: http://{{http_wp_server_name}}/wp-admin/install.php?step=2
+    method: POST
+    body: "weblog_title={{wp_title}}&user_name={{wp_admin}}&admin_email={{wp_admin_email}}&admin_password={{wp_admin_pwd}}&admin_password2={{wp_admin_pwd}}&pw_weak=1"
+

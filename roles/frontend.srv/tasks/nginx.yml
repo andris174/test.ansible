@@ -27,3 +27,8 @@
     regexp: "server_name"
     line: "        server_name {{http_wp_server_name}};"
   notify: restart nginx
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted

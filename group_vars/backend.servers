@@ -2,8 +2,3 @@ lx_wp_user: wp_user1
 lx_wp_group: wp_user1
 
 php_ver: 7.1
-
-wp_title: Ansible.Test
-wp_admin: admin
-wp_admin_email: aoff@ukr.net
-wp_admin_pwd: ansibletest
